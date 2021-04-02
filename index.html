@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Speech library</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
+    </link>
+</head>
+
+<body>
+    <div class="container">
+        <div class="result-container">
+            <div class="row">
+                <div class="col-sm-6 result-col">
+                    <h4 class="title">Recognition result</h4>
+                    <select name="fromLang" onchange="ChangeLang()">
+                        <option value="en">English</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="ja" selected>日本語</option>
+                    </select>
+                    <div class="recog-results"></div>
+                </div>
+                <div class="col-sm-6 result-col">
+                    <h4 class="title">Translation result</h4>
+                    <select name="toLang" onchange="ChangeLang()">
+                        <option value="en" selected>English</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                    <div class="translate-results"></div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-bottom">
+            <button class="btn btn-primary start-stop-btn">Start listen</button>
+            <p class="inter-result"></p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="eventemiter.js"></script>
+    <script src="speech.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
